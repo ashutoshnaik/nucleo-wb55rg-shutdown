@@ -94,7 +94,7 @@ void PWR_EnterOffMode(void)
    */
   LL_PWR_ClearFlag_WU();
 
-  LL_PWR_SetPowerMode(LL_PWR_MODE_STANDBY);
+  LL_PWR_SetPowerMode(LL_PWR_MODE_SHUTDOWN);
 
   LL_LPM_EnableDeepSleep(); /**< Set SLEEPDEEP bit of Cortex System Control Register */
 
