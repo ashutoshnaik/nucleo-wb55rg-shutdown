@@ -1472,22 +1472,22 @@ static void Go_standby()
   }
   
   /* Disable all used wakeup sources */
-  LL_PWR_DisableWakeUpPin(LL_PWR_WAKEUP_PIN5);
+  LL_PWR_DisableWakeUpPin(LL_PWR_WAKEUP_PIN1);
   
   /* Clear all wake up Flag */
   LL_PWR_ClearFlag_WU();
   
-  /* Enable pull up on wakeup pin PC5 */
-  LL_PWR_EnableGPIOPullUp(LL_PWR_GPIO_C, LL_PWR_GPIO_BIT_5);
+  /* Enable pull up on wakeup pin PA0 */
+  LL_PWR_EnableGPIOPullUp(LL_PWR_GPIO_A, LL_PWR_GPIO_BIT_0);
   
   /* Enable pull-up and pull-down configuration for CPU1 */
   LL_PWR_EnablePUPDCfg();
   
   /* Set wakeup pin polarity */
-  LL_PWR_SetWakeUpPinPolarityLow(LL_PWR_WAKEUP_PIN5);
+  LL_PWR_SetWakeUpPinPolarityLow(LL_PWR_WAKEUP_PIN1);
 
   /* Enable wakeup pin */
-  LL_PWR_EnableWakeUpPin(LL_PWR_WAKEUP_PIN5);
+  LL_PWR_EnableWakeUpPin(LL_PWR_WAKEUP_PIN1);
   
   /* As default User push-button (SW1) state is high level, need to clear all wake up Flag again */
   LL_PWR_ClearFlag_WU();

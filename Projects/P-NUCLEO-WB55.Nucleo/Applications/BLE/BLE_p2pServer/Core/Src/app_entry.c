@@ -129,9 +129,9 @@ void MX_APPE_Init(void)
 
   Button_Init();
   
-  LL_PWR_DisableGPIOPullUp(LL_PWR_GPIO_C, LL_PWR_GPIO_BIT_5);
+  LL_PWR_DisableGPIOPullUp(LL_PWR_GPIO_A, LL_PWR_GPIO_BIT_0);
   LL_PWR_EnablePUPDCfg();
-  LL_PWR_DisableWakeUpPin(LL_PWR_WAKEUP_PIN5);
+  LL_PWR_DisableWakeUpPin(LL_PWR_WAKEUP_PIN1);
   
   LL_PWR_ClearFlag_WU();
 /* USER CODE END APPE_Init_1 */
