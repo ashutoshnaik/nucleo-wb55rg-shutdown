@@ -507,7 +507,7 @@ void APP_BLE_Init(void)
   P2PS_APP_Init();
 
   /* USER CODE BEGIN APP_BLE_Init_3 */
-  HW_TS_Create(CFG_TIM_PROC_ID_ISR, &(BleApplicationContext.Standby_timer_Id), hw_ts_SingleShot, Trig_Go_standby);
+  //HW_TS_Create(CFG_TIM_PROC_ID_ISR, &(BleApplicationContext.Standby_timer_Id), hw_ts_SingleShot, Trig_Go_standby);
   UTIL_SEQ_RegTask(1<<CFG_TASK_GO_STANDBY_ID, UTIL_SEQ_RFU, Go_standby);
   /* USER CODE END APP_BLE_Init_3 */
 
@@ -533,10 +533,11 @@ void APP_BLE_Init(void)
   /**
    * Start to Advertise to be connected by P2P Client
    */
-  Adv_Request(APP_BLE_FAST_ADV);
+  //Adv_Request(APP_BLE_FAST_ADV);
 
   /* USER CODE BEGIN APP_BLE_Init_2 */
 
+	Trig_Go_standby();
   /* USER CODE END APP_BLE_Init_2 */
 
   return;
